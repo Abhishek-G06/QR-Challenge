@@ -1,103 +1,137 @@
+
 # Frontend Mentor - QR code component solution
 
-This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+  
+
+This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+  
 
 ## Table of contents
 
+  
+
 - [Overview](#overview)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
+
+- [Screenshot](#screenshot)
+
+- [Links](#links)
+
 - [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+
+- [Built with](#built-with)
+
+- [What I learned](#what-i-learned)
+
+- [Continued development](#continued-development)
+
+- [Useful resources](#useful-resources)
+
 - [Author](#author)
+
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+  
 
 ## Overview
 
+  
+
 ### Screenshot
 
-![](./screenshot.jpg)
+![QR code component screenshot](https://github.com/Abhishek-G06/QR-Challenge/blob/16e2c67f7739ad5ce8ccb2b261df3f28d74c8921/images/desktop%20QR%20component%20.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+  
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+
+  
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+  
+
+- Solution URL: [QR code github](https://github.com/Abhishek-G06/QR-Challenge.git)
+
+- Live Site URL: [QR code challenge live](https://qr-code-comp-challenge.netlify.app)
+
+  
 
 ## My process
 
+  
+
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+  
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Semantic HTML5 markup
+
+- CSS custom properties
+
+- Flexbox
+
+- CSS Grid
+
+  
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+  
+1. meta tags are one of the factors that increase SEO and good for accessibility
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<meta name="description" content="Front-end mentor's QR code component challenge is perfect for individuals new to CSS and HTML">
+<meta name="keywords" content="HTML, CSS, Desktop design, Mobile design">
+<meta name="author" content="Rupali Roy Choudhury">
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+2. Preconnection concept while obtaining fonts. Preconnect is a resource hint that tells the browser to initiate an early connection to the specified domain. It can improve the loading speed of resources, such as web fonts, by starting the connection process early in the page's lifecycle.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+```
+
+3. Difference between margin and margin-block/margin-inline. The latter takes into account of writing mode (handy when page is translated in different languages which adopt different writing modes)
+
+4. Importance of mentioning height and width attributes for image tag in order to prevent CLS
+
+  
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+  
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+1) I would like to implement this project using ReactJS, Sass.
+2) Instead of getting fonts from another link, I would like to host it locally to improve web performance metrics like LCP, FCP
+3) In another iteration, I would like to explore how to vertically position the qr code to the center especially when the bottom tab exists
+4) Segregate the CSS reset in a separate css file (esp handy for larger projects)
+
+![Mobile screenshot](https://github.com/Abhishek-G06/QR-Challenge/blob/6a95a878c12e9b3d2eafa9c3cf5f27c75a2cfb66/images/QR_Screenshot_Chrome.jpg)
+  
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+  
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [New Viewport Units](https://ishadeed.com/article/new-viewport-units/#:~:text=Be%20careful%20with%20the%20dvh,is%20scrolling%20up%20or%20down.) - This can potentially help me in centering the screen in mobile that have tabs (as mentioned above).
+  
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Abhishek Gupta](https://www.linkedin.com/in/abhishek-gupta-667229189/)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@Abhishek-G06](https://www.frontendmentor.io/profile/Abhishek-G06)
+  
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+I express my gratitude FrontEnd mentor discord help channel where I found out different methods to throw new things in my code. 
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I referred to the following articles:
+1. https://www.joshwcomeau.com/css/custom-css-reset/
+2. https://fedmentor.dev/posts/
