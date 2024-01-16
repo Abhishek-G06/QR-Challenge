@@ -1,0 +1,133 @@
+:root {
+    /* Colors */
+    --background-color: hsl(212, 45%, 89%);
+    --card-color: hsl(0, 0%, 100%);
+    --link-color: hsl(228, 45%, 44%);
+    --main-text-color: hsl(218,44%,22%);
+    --sub-text-color: hsl(220, 15%, 55%);
+
+    /* Typography */
+    --font-size-main: 22px; /*1.375rem*/ 
+    --font-size-sub: 15px; /* 0.9375rem  */
+    --font-size-footer: 13px; /* 0.8125rem */
+    --font-weight-bold: 700;
+    --font-weight-regular: 400;
+    --line-height-normal: 1.2;  /* Normal */
+
+    /* Spacing */
+    --space-none: 0;
+    --space-base: 16px; /* 1rem */
+    --space-m: 24px; /* 1.5rem */
+    --space-l: 30px; /* 2.5rem */ 
+
+    /* Border radius */
+    --card-border-radius: 20px;   /* RRC: Is it ok to use pixels for border-radius and box-shadow?  */
+    --img-border-radius: 10px;
+
+    /* Box shadow */
+    --card-box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+    /******************************************/
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+html{
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none; 
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h2, p{
+    margin-block-end: 0;
+}
+
+/* Setting core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+a:not([class]){
+    text-decoration-skip-ink: auto;
+    color: var(--link-color);
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/**********  Main CSS  **********/
+
+body{
+    background-color: var(--background-color);
+    font-family: 'Outfit';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    max-width: 320px;
+    max-height: 500px;
+    border-radius: var(--card-border-radius);
+    background: var(--card-color);
+    box-shadow: var(--card-box-shadow);
+    padding: var(--space-base) var(--space-base) var(--space-l) var(--space-base);
+}
+
+img{
+    border-radius: var(--img-border-radius);
+    height: 55%;
+    width: 100%;
+}
+
+h2{
+    font-size: var(--font-size-main);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    line-height: var(--line-height-normal);
+    color: var(--main-text-color);
+    margin-top: var(--space-m);
+}
+
+p{
+    font-size: var(--font-size-sub);
+    font-weight: var(--font-weight-regular);
+    text-align: center;
+    line-height: var(--line-height-normal);
+    color: var(--sub-text-color);
+    margin-top: var(--space-base);
+    padding: var(--space-none) var(--space-base);
+}
+
+footer{
+    font-size: var(--font-size-footer);
+    text-align: center;
+    margin-top: var(--space-l);
+    max-width: 60%;
+}
+
+footer a{
+    color: var(--link-color);
+}
+
+/*********** End Main CSS ***********/
